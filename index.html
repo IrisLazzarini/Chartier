@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -14,7 +15,7 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <h2>Hojalatería Chartier SRL</h2>
+                    <img src="img/logo/Chartier.png" alt="Hojalatería Chartier SRL" class="logo-image">
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio">Inicio</a></li>
@@ -30,7 +31,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-background">
-            <img src="metalurgia-hero.svg" alt="Industria Metalúrgica" class="hero-bg-image">
+            <img src="img/FONDODOOTER/METALURGICA.png" alt="Planta Industrial Hojalatería Chartier" class="hero-bg-image">
         </div>
         <div class="hero-particles">
             <div class="particle"></div>
@@ -104,7 +105,9 @@
             <div class="productos-grid">
                 <!-- Transporte y Logística -->
                 <div class="producto-card">
-                    <div class="producto-icon">👉🏽</div>
+                    <div class="producto-icon">
+                        <img src="img/transporteylogistica.png" alt="Transporte y Logística" class="producto-imagen">
+                    </div>
                     <h3 class="producto-title">Transporte y Logística</h3>
                     <div class="producto-description">
                         <h4>DESCRIPCIÓN</h4>
@@ -121,7 +124,9 @@
 
                 <!-- Plegado -->
                 <div class="producto-card">
-                    <div class="producto-icon">👉🏽</div>
+                    <div class="producto-icon">
+                        <img src="img/PLEGADOS.png" alt="Plegado" class="producto-imagen">
+                    </div>
                     <h3 class="producto-title">Plegado</h3>
                     <div class="producto-description">
                         <h4>DESCRIPCIÓN</h4>
@@ -152,7 +157,9 @@
 
                 <!-- Corte -->
                 <div class="producto-card">
-                    <div class="producto-icon">👉🏽</div>
+                    <div class="producto-icon">
+                        <img src="img/corte.png" alt="Corte" class="producto-imagen">
+                    </div>
                     <h3 class="producto-title">Corte</h3>
                     <div class="producto-description">
                         <h4>DESCRIPCIÓN</h4>
@@ -201,39 +208,61 @@
             <div class="contacto-grid">
                 <div class="contacto-info">
                     <div class="contacto-item">
-                        <h3>Email</h3>
-                        <p>contacto@hojalateriachartier.com.ar</p>
-                        <p>hojalateriachartier@gmail.com</p>
+                        <div class="contacto-header">
+                         <i class="bi bi-envelope-at-fill contacto-icon"></i>
+                         <h3>Email</h3>
+                     </div>
+                     <a href="mailto:contacto@hojalateriachartier.com.ar" class="contacto-link">
+                          <i class="bi bi-envelope"></i> contacto@hojalateriachartier.com.ar
+                      </a>
+                      <a href="mailto:hojalateriachartier@gmail.com" class="contacto-link">
+                          <i class="bi bi-envelope"></i> hojalateriachartier@gmail.com
+                      </a>
                     </div>
                     
                     <div class="contacto-item">
+                        <div class="contacto-header">
+                        <i class="bi bi-whatsapp contacto-icon"></i>
                         <h3>WhatsApp</h3>
-                        <p>3498-410055</p>
-                        <p>3498-474717</p>
+                    </div>
+                        <a href="https://wa.me/5493498410055" class="contacto-link whatsapp-link" target="_blank">
+                              <i class="bi bi-whatsapp"></i> 3498-410055
+                          </a>
+                          <a href="https://wa.me/5493498474717" class="contacto-link whatsapp-link" target="_blank">
+                              <i class="bi bi-whatsapp"></i> 3498-474717
+                          </a>
                     </div>
                     
                     <div class="contacto-item">
-                        <h3>Teléfono Fijo</h3>
-                        <p>3498 428465</p>
+                        <div class="contacto-header">
+                            <i class="bi bi-telephone contacto-icon"></i>
+                            <h3>Teléfono Fijo</h3>
+                        </div>
+                        <a href="tel:+5493498428465" class="contacto-link">
+                            <i class="bi bi-telephone"></i> 3498 428465
+                        </a>
                     </div>
                     
                     <div class="contacto-item">
-                        <h3>Direcciones</h3>
+                        <div class="contacto-header">
+                            <i class="bi bi-geo-alt contacto-icon"></i>
+                            <h3>Direcciones</h3>
+                        </div>
                         <div class="direcciones">
                             <div class="direccion">
                                 <h4>PLANTA CENTRAL</h4>
-                                <p>San Roque 2098</p>
+                                <p><i class="bi bi-geo-alt"></i> San Roque 2098</p>
                             </div>
                             <div class="direccion">
                                 <h4>PLANTA 2</h4>
-                                <p>Área Industrial Ruta 11 km 563 Lote D</p>
+                                <p><i class="bi bi-geo-alt"></i> Área Industrial Ruta 11 km 563 Lote D</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contacto-image">
-                    <img src="metalurgia-contacto.svg" alt="Planta Industrial Hojalatería Chartier" class="contact-bg-image">
+                    <img src="img/fondodeabajo.png" alt="Planta Industrial Hojalatería Chartier" class="contact-bg-image">
                 </div>
             </div>
         </div>
@@ -255,10 +284,12 @@
             if (full.style.display === 'none') {
                 summary.style.display = 'none';
                 full.style.display = 'block';
+                card.classList.add('expanded');
                 button.textContent = 'VER MENOS';
             } else {
                 summary.style.display = 'block';
                 full.style.display = 'none';
+                card.classList.remove('expanded');
                 button.textContent = 'VER MÁS';
             }
         }
