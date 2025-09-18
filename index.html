@@ -15,14 +15,17 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="img/logo/Chartier.png" alt="Hojalatería Chartier SRL" class="logo-image">
+                    <div class="logo-text">CHARTIER</div>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+                <ul class="nav-menu nav-menu-spaced" id="navMenu">
+                    <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+                    <li><a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a></li>
+                    <li><a href="#productos" onclick="closeMobileMenu()">Productos</a></li>
+                    <li><a href="#servicios" onclick="closeMobileMenu()">Servicios</a></li>
+                    <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -90,9 +93,9 @@
             <h2 class="section-title">Nosotros</h2>
             <div class="nosotros-content">
                 <p>Desde 1986, Hojalatería Chartier SRL se consolida como una empresa familiar que, con esfuerzo y compromiso, supo crecer y adaptarse a los cambios de un mercado cada vez más competitivo. A lo largo de los años, incorporamos tecnología de vanguardia y un equipo humano calificado, manteniendo siempre la esencia de nuestros orígenes.</p>
-                
+
                 <p>Nuestros valores nos guían en cada paso: la innovación, para mejorar procesos y ofrecer soluciones actuales; el trabajo en equipo, porque creemos en las personas como motor de desarrollo; y la confianza, que construimos día a día con clientes y proveedores a través de relaciones transparentes y duraderas.</p>
-                
+
                 <p>Lo que nos diferencia es nuestra capacidad de transformar la materia prima en productos de calidad, diseñados a medida de cada necesidad. Conservamos el espíritu familiar que nos dio origen, pero con la mirada puesta en el futuro, reafirmando nuestro compromiso con el crecimiento de la Industria Argentina.</p>
             </div>
         </div>
@@ -208,7 +211,7 @@
                 <h2 class="section-title">Contáctanos</h2>
                 <p class="section-subtitle">Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de estos medios.</p>
             </div>
-            
+
             <div class="contacto-main-grid">
                 <!-- Grid de Contacto Personalizado -->
                 <div class="contacto-custom-grid">
@@ -306,7 +309,7 @@
                             <h3 class="form-title">Envíanos un Mensaje</h3>
                             <p class="form-subtitle">Completa el formulario y te responderemos a la brevedad</p>
                         </div>
-                        
+
                         <form id="contactForm" class="modern-contact-form">
                             <div class="form-row">
                                 <div class="form-field">
@@ -314,28 +317,28 @@
                                     <input type="text" id="nombre" name="nombre" class="field-input" required placeholder="Tu nombre completo">
                                 </div>
                             </div>
-                            
+
                             <div class="form-row">
                                 <div class="form-field">
                                     <label for="email" class="field-label">Correo Electrónico *</label>
                                     <input type="email" id="email" name="email" class="field-input" required placeholder="tu@email.com">
                                 </div>
                             </div>
-                            
+
                             <div class="form-row">
                                 <div class="form-field">
                                     <label for="telefono" class="field-label">Teléfono</label>
                                     <input type="tel" id="telefono" name="telefono" class="field-input" placeholder="Tu número de teléfono">
                                 </div>
                             </div>
-                            
+
                             <div class="form-row">
                                 <div class="form-field">
                                     <label for="mensaje" class="field-label">Mensaje *</label>
                                     <textarea id="mensaje" name="mensaje" class="field-textarea" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
                                 </div>
                             </div>
-                            
+
                             <div class="form-actions">
                                 <button type="submit" class="modern-submit-btn">
                                     <span class="btn-text">ENVIAR MENSAJE</span>
@@ -344,7 +347,7 @@
                             </div>
                         </form>
                     </div>
-                    
+
                     <!-- Imagen Principal -->
                     <div class="image-container image-grid-item">
                         <img src="img/corte.png" alt="Corte industrial" class="contact-main-image">
@@ -362,35 +365,94 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            console.log('toggleMobileMenu called');
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!navMenu || !mobileBtn) {
+                console.error('Menu elements not found');
+                return;
+            }
+
+            navMenu.classList.toggle('active');
+            console.log('Menu active class:', navMenu.classList.contains('active'));
+
+            // Animate hamburger icon
+            if (navMenu.classList.contains('active')) {
+                mobileBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+                mobileBtn.style.transform = 'rotate(90deg)';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                console.log('Menu opened');
+            } else {
+                mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
+                mobileBtn.style.transform = 'rotate(0deg)';
+                document.body.style.overflow = 'auto';
+                console.log('Menu closed');
+            }
+        }
+
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+
+            navMenu.classList.remove('active');
+            mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
+            mobileBtn.style.transform = 'rotate(0deg)';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const header = document.querySelector('.header');
+
+            if (navMenu.classList.contains('active') &&
+                !navMenu.contains(event.target) &&
+                !mobileBtn.contains(event.target) &&
+                !header.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+
         // Contact Form Handler
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const formData = new FormData(this);
             const nombre = formData.get('nombre');
             const email = formData.get('email');
             const telefono = formData.get('telefono');
             const mensaje = formData.get('mensaje');
-            
+
             // Create email body
             const emailBody = `Nuevo mensaje de contacto desde la web:\n\n` +
                             `Nombre: ${nombre}\n` +
                             `Email: ${email}\n` +
                             `Teléfono: ${telefono || 'No proporcionado'}\n\n` +
                             `Mensaje:\n${mensaje}`;
-            
+
             // Create mailto link
             const mailtoLink = `mailto:contacto@hojalateriachartier.com.ar?subject=Consulta desde la web - ${nombre}&body=${encodeURIComponent(emailBody)}`;
-            
+
             // Open email client
             window.location.href = mailtoLink;
-            
+
             // Show success message
-            const submitBtn = this.querySelector('.submit-btn');
+            const submitBtn = this.querySelector('.modern-submit-btn');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> ¡Mensaje enviado!';
             submitBtn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
-            
+
             // Reset form and button after 3 seconds
             setTimeout(() => {
                 this.reset();
@@ -398,12 +460,12 @@
                 submitBtn.style.background = 'linear-gradient(135deg, #FCEF13, #FFD700)';
             }, 3000);
         });
-        
+
         function toggleProducto(button) {
             const card = button.closest('.producto-card');
             const summary = card.querySelector('.producto-summary');
             const full = card.querySelector('.producto-full');
-            
+
             if (full.style.display === 'none') {
                 summary.style.display = 'none';
                 full.style.display = 'block';
