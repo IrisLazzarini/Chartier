@@ -204,65 +204,151 @@
     <!-- Contacto Section -->
     <section id="contacto" class="contacto">
         <div class="container">
-            <h2 class="section-title">Contáctanos</h2>
-            <div class="contacto-grid">
-                <div class="contacto-info">
-                    <div class="contacto-item">
-                        <div class="contacto-header">
-                         <i class="bi bi-envelope-at-fill contacto-icon"></i>
-                         <h3>Email</h3>
-                     </div>
-                     <a href="mailto:contacto@hojalateriachartier.com.ar" class="contacto-link">
-                          <i class="bi bi-envelope"></i> contacto@hojalateriachartier.com.ar
-                      </a>
-                      <a href="mailto:hojalateriachartier@gmail.com" class="contacto-link">
-                          <i class="bi bi-envelope"></i> hojalateriachartier@gmail.com
-                      </a>
-                    </div>
-                    
-                    <div class="contacto-item">
-                        <div class="contacto-header">
-                        <i class="bi bi-whatsapp contacto-icon"></i>
-                        <h3>WhatsApp</h3>
-                    </div>
-                        <a href="https://wa.me/5493498410055" class="contacto-link whatsapp-link" target="_blank">
-                              <i class="bi bi-whatsapp"></i> 3498-410055
-                          </a>
-                          <a href="https://wa.me/5493498474717" class="contacto-link whatsapp-link" target="_blank">
-                              <i class="bi bi-whatsapp"></i> 3498-474717
-                          </a>
-                    </div>
-                    
-                    <div class="contacto-item">
-                        <div class="contacto-header">
-                            <i class="bi bi-telephone contacto-icon"></i>
-                            <h3>Teléfono Fijo</h3>
+            <div class="contacto-header-section">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de estos medios.</p>
+            </div>
+            
+            <div class="contacto-main-grid">
+                <!-- Grid de Contacto Personalizado -->
+                <div class="contacto-custom-grid">
+                    <!-- Email Card -->
+                    <div class="contact-card email-card">
+                        <div class="card-icon">
+                            <i class="bi bi-envelope-at-fill"></i>
                         </div>
-                        <a href="tel:+5493498428465" class="contacto-link">
-                            <i class="bi bi-telephone"></i> 3498 428465
-                        </a>
-                    </div>
-                    
-                    <div class="contacto-item">
-                        <div class="contacto-header">
-                            <i class="bi bi-geo-alt contacto-icon"></i>
-                            <h3>Direcciones</h3>
-                        </div>
-                        <div class="direcciones">
-                            <div class="direccion">
-                                <h4>PLANTA CENTRAL</h4>
-                                <p><i class="bi bi-geo-alt"></i> San Roque 2098</p>
-                            </div>
-                            <div class="direccion">
-                                <h4>PLANTA 2</h4>
-                                <p><i class="bi bi-geo-alt"></i> Área Industrial Ruta 11 km 563 Lote D</p>
+                        <div class="card-content">
+                            <h3 class="card-title">Email</h3>
+                            <p class="card-subtitle">Escríbenos directamente</p>
+                            <div class="card-links">
+                                <a href="mailto:contacto@hojalateriachartier.com.ar" class="contact-link primary-link">
+                                    <i class="bi bi-envelope"></i>
+                                    <span>contacto@hojalateriachartier.com.ar</span>
+                                </a>
+                                <a href="mailto:hojalateriachartier@gmail.com" class="contact-link secondary-link">
+                                    <i class="bi bi-envelope"></i>
+                                    <span>hojalateriachartier@gmail.com</span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="contacto-image">
-                    <img src="img/fondodeabajo.png" alt="Planta Industrial Hojalatería Chartier" class="contact-bg-image">
+
+                    <!-- WhatsApp Card -->
+                    <div class="contact-card whatsapp-card">
+                        <div class="card-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">WhatsApp</h3>
+                            <p class="card-subtitle">Chatea con nosotros</p>
+                            <div class="card-links">
+                                <a href="https://wa.me/5493498410055" class="contact-link whatsapp-link" target="_blank">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <span>3498-410055</span>
+                                </a>
+                                <a href="https://wa.me/5493498474717" class="contact-link whatsapp-link" target="_blank">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <span>3498-474717</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teléfono Card -->
+                    <div class="contact-card phone-card">
+                        <div class="card-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Teléfono Fijo</h3>
+                            <p class="card-subtitle">Llámanos directamente</p>
+                            <div class="card-links">
+                                <a href="tel:+5493498428465" class="contact-link phone-link">
+                                    <i class="bi bi-telephone"></i>
+                                    <span>3498 428465</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direcciones Card -->
+                    <div class="contact-card location-card">
+                        <div class="card-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Nuestras Ubicaciones</h3>
+                            <p class="card-subtitle">Visítanos en nuestras plantas</p>
+                            <div class="locations-container">
+                                <div class="location-item">
+                                    <h4 class="location-name">PLANTA CENTRAL</h4>
+                                    <a href="https://share.google/kKz7gMjT9bo5UnQ7F" target="_blank" class="location-link">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <span>San Roque 2098</span>
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                                <div class="location-item">
+                                    <h4 class="location-name">PLANTA 2</h4>
+                                    <a href="https://share.google/nJkDybltaUrntEpYx" target="_blank" class="location-link">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <span>RN11 KM 563 lote D, S3040 San Justo, Santa Fe</span>
+                                        <i class="bi bi-box-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-section form-grid-item">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3 class="form-title">Envíanos un Mensaje</h3>
+                            <p class="form-subtitle">Completa el formulario y te responderemos a la brevedad</p>
+                        </div>
+                        
+                        <form id="contactForm" class="modern-contact-form">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="nombre" class="field-label">Nombre Completo *</label>
+                                    <input type="text" id="nombre" name="nombre" class="field-input" required placeholder="Tu nombre completo">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="email" class="field-label">Correo Electrónico *</label>
+                                    <input type="email" id="email" name="email" class="field-input" required placeholder="tu@email.com">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="telefono" class="field-label">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" class="field-input" placeholder="Tu número de teléfono">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="mensaje" class="field-label">Mensaje *</label>
+                                    <textarea id="mensaje" name="mensaje" class="field-textarea" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="modern-submit-btn">
+                                    <span class="btn-text">ENVIAR MENSAJE</span>
+                                    <i class="bi bi-send-fill btn-icon"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Imagen Principal -->
+                    <div class="image-container image-grid-item">
+                        <img src="img/corte.png" alt="Corte industrial" class="contact-main-image">
+                    </div>
                 </div>
             </div>
         </div>
@@ -276,6 +362,43 @@
     </footer>
 
     <script>
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const nombre = formData.get('nombre');
+            const email = formData.get('email');
+            const telefono = formData.get('telefono');
+            const mensaje = formData.get('mensaje');
+            
+            // Create email body
+            const emailBody = `Nuevo mensaje de contacto desde la web:\n\n` +
+                            `Nombre: ${nombre}\n` +
+                            `Email: ${email}\n` +
+                            `Teléfono: ${telefono || 'No proporcionado'}\n\n` +
+                            `Mensaje:\n${mensaje}`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:contacto@hojalateriachartier.com.ar?subject=Consulta desde la web - ${nombre}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> ¡Mensaje enviado!';
+            submitBtn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+            
+            // Reset form and button after 3 seconds
+            setTimeout(() => {
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = 'linear-gradient(135deg, #FCEF13, #FFD700)';
+            }, 3000);
+        });
+        
         function toggleProducto(button) {
             const card = button.closest('.producto-card');
             const summary = card.querySelector('.producto-summary');

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="sparkGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:0.3" />
+    </radialGradient>
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#808080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#404040;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#1a1a1a"/>
+  
+  <!-- Metal piece being welded -->
+  <rect x="100" y="300" width="600" height="80" fill="url(#metalGradient)" rx="5"/>
+  <rect x="120" y="320" width="560" height="40" fill="#606060" rx="3"/>
+  
+  <!-- Welding torch/gun -->
+  <g transform="translate(400,200)">
+    <!-- Torch body -->
+    <rect x="-15" y="0" width="30" height="120" fill="#2a2a2a" rx="8"/>
+    <rect x="-12" y="10" width="24" height="100" fill="#404040" rx="6"/>
+    
+    <!-- Torch tip -->
+    <rect x="-8" y="115" width="16" height="25" fill="#606060" rx="2"/>
+    <rect x="-5" y="135" width="10" height="15" fill="#808080" rx="1"/>
+    
+    <!-- Handle grip -->
+    <rect x="-18" y="40" width="36" height="60" fill="#1a1a1a" rx="10"/>
+    <rect x="-15" y="45" width="30" height="50" fill="#333" rx="8"/>
+  </g>
+  
+  <!-- Welding arc/spark center -->
+  <circle cx="400" cy="340" r="15" fill="url(#sparkGradient)" filter="url(#glow)"/>
+  <circle cx="400" cy="340" r="8" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- Flying sparks -->
+  <g opacity="0.8">
+    <!-- Large sparks -->
+    <circle cx="350" cy="320" r="3" fill="#FFD700" filter="url(#glow)"/>
+    <circle cx="450" cy="310" r="2.5" fill="#FFA500" filter="url(#glow)"/>
+    <circle cx="380" cy="280" r="2" fill="#FF6B00" filter="url(#glow)"/>
+    <circle cx="420" cy="290" r="2.5" fill="#FFD700" filter="url(#glow)"/>
+    <circle cx="360" cy="360" r="2" fill="#FF4500" filter="url(#glow)"/>
+    
+    <!-- Medium sparks -->
+    <circle cx="330" cy="340" r="1.5" fill="#FFA500" filter="url(#glow)"/>
+    <circle cx="470" cy="330" r="1.5" fill="#FFD700" filter="url(#glow)"/>
+    <circle cx="390" cy="260" r="1" fill="#FF8C00" filter="url(#glow)"/>
+    <circle cx="410" cy="270" r="1.5" fill="#FFA500" filter="url(#glow)"/>
+    <circle cx="340" cy="380" r="1" fill="#FF6B00" filter="url(#glow)"/>
+    
+    <!-- Small sparks -->
+    <circle cx="320" cy="350" r="1" fill="#FF4500" filter="url(#glow)"/>
+    <circle cx="480" cy="340" r="0.8" fill="#FFD700" filter="url(#glow)"/>
+    <circle cx="370" cy="250" r="0.8" fill="#FFA500" filter="url(#glow)"/>
+    <circle cx="430" cy="260" r="1" fill="#FF8C00" filter="url(#glow)"/>
+    <circle cx="350" cy="390" r="0.8" fill="#FF6B00" filter="url(#glow)"/>
+    <circle cx="460" cy="350" r="0.8" fill="#FFD700" filter="url(#glow)"/>
+    
+    <!-- Spark trails -->
+    <line x1="350" y1="320" x2="340" y2="315" stroke="#FFD700" stroke-width="1" opacity="0.6"/>
+    <line x1="450" y1="310" x2="460" y2="305" stroke="#FFA500" stroke-width="1" opacity="0.6"/>
+    <line x1="380" y1="280" x2="375" y2="270" stroke="#FF6B00" stroke-width="0.8" opacity="0.5"/>
+    <line x1="420" y1="290" x2="425" y2="280" stroke="#FFD700" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Welding light rays -->
+  <g opacity="0.3">
+    <line x1="400" y1="340" x2="300" y2="240" stroke="#FCEF13" stroke-width="2"/>
+    <line x1="400" y1="340" x2="500" y2="240" stroke="#FCEF13" stroke-width="2"/>
+    <line x1="400" y1="340" x2="250" y2="340" stroke="#FCEF13" stroke-width="1.5"/>
+    <line x1="400" y1="340" x2="550" y2="340" stroke="#FCEF13" stroke-width="1.5"/>
+    <line x1="400" y1="340" x2="320" y2="420" stroke="#FCEF13" stroke-width="1.5"/>
+    <line x1="400" y1="340" x2="480" y2="420" stroke="#FCEF13" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Weld seam -->
+  <rect x="380" y="335" width="40" height="10" fill="#FFD700" opacity="0.7" rx="2"/>
+  <rect x="385" y="337" width="30" height="6" fill="#FFFFFF" opacity="0.5" rx="1"/>
+</svg>
