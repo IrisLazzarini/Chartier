@@ -467,6 +467,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8px 20px;
     margin-bottom: 30px;
     backdrop-filter: blur(10px);
+    margin-top: 28px; /* Bajado un poco más */
+}
+
+/* Justificar todos los párrafos para orden y estética */
+p {
+    text-align: justify;
 }
 
 .badge-text {
