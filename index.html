@@ -6,8 +6,7 @@
     <meta name="description" content="Hojalatería Chartier SRL - Empresa líder en servicios metalúrgicos desde 1986. Corte láser, plegado, soldadura y más.">
     <title>Hojalatería Chartier SRL - Desarrollo, Calidad y Compromiso Metalúrgico</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 <body>
@@ -112,13 +111,13 @@
                     <div class="servicio-icon">
                         <img src="img/PLEGADOS.png" alt="Corte y Plegado" class="servicio-imagen">
                     </div>
-                    <h3 class="servicio-title">Corte y Plegado</h3>
+                    <h3 class="servicio-title">CORTE Y PLEGADO</h3>
                     <div class="servicio-description">
                         <div class="servicio-summary">
                             <p>En Hojalatería Chartier SRL comercializamos una amplia línea de chapas de acero.</p>
-                            <p>Ofrecemos el más completo servicio de plegado, junto con corte por guillotina, corte por plasma y cilindrado, abarcando espesores de 0,30 mm a 8 mm y medidas de hasta 6 metros de largo.</p>
+                            <p>Ofrecemos el más completo servicio de plegado, junto con corte por guillotina, corte por plasma y cilindrado, abarcando espesores de 0,30 mm a 8 mm, en medidas de hasta 6 metros de largo.</p>
                         </div>
-                        <div class="servicio-full" style="display: none;">
+                        <div class="servicio-full">
                             <p>En Hojalatería Chartier SRL comercializamos una amplia línea de chapas de acero:</p>
                             <ul>
                                 <li>Galvanizadas</li>
@@ -137,7 +136,7 @@
                             <p>La capacidad, experiencia, calidad y responsabilidad de nuestro equipo profesional nos han posicionado como un referente en el mercado zonal y regional.</p>
                         </div>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)">VER MÁS</button>
+                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
 
                 <!-- Corte Plasma -->
@@ -145,19 +144,19 @@
                     <div class="servicio-icon">
                         <img src="img/corte.png" alt="Corte Plasma" class="servicio-imagen">
                     </div>
-                    <h3 class="servicio-title">⚙️ Corte Plasma</h3>
+                    <h3 class="servicio-title">CORTE PLASMA</h3>
                     <div class="servicio-description">
                         <div class="servicio-summary">
+                            <p>Corte Plasma</p>
                             <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
                             <p>En Hojalatería Chartier SRL disponemos de equipos de plasma de alta definición, adecuados para el procesamiento de aceros de distintos espesores, con una excelente relación entre velocidad, calidad de corte y costo operativo.</p>
                             <p>Este sistema es especialmente eficiente para trabajos estructurales, piezas industriales y componentes de gran formato, donde se requiere robustez y productividad sin comprometer la calidad final.</p>
+                            <p>Aplicaciones: estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
                         </div>
-                        <div class="servicio-full" style="display: none;">
-                            <h4>👉 Aplicaciones</h4>
-                            <p>Estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
+                        <div class="servicio-full">
                         </div>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)">VER MÁS</button>
+                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
 
                 <!-- Corte Láser -->
@@ -165,14 +164,14 @@
                     <div class="servicio-icon">
                         <img src="img/corte.png" alt="Corte Láser" class="servicio-imagen">
                     </div>
-                    <h3 class="servicio-title">Corte Láser</h3>
+                    <h3 class="servicio-title">CORTE LÁSER</h3>
                     <div class="servicio-description">
                         <div class="servicio-summary">
-                            <p>El corte láser ofrece precisión milimétrica y acabados de alta calidad para todo tipo de piezas metálicas.</p>
-                            <p>Esta tecnología permite realizar cortes complejos con tolerancias mínimas, ideal para proyectos que requieren exactitud y detalles finos.</p>
-                            <p>Perfecto para trabajos de alta precisión en acero inoxidable, acero al carbono, aluminio y otros metales.</p>
+                            <p>El corte láser es un proceso de manufactura avanzada que permite obtener piezas metálicas con una precisión dimensional milimétrica y acabado de alta calidad.</p>
+                            <p>En Hojalatería Chartier SRL contamos con equipamiento de tecnología láser de última generación, capaz de realizar cortes complejos en acero al carbono, inoxidable y galvanizado, garantizando una excelente repetitividad y mínima deformación térmica del material.</p>
+                            <p>Esta tecnología ofrece alta velocidad de producción, reducción de desperdicios y óptima eficiencia energética.</p>
                         </div>
-                        <div class="servicio-full" style="display: none;">
+                        <div class="servicio-full">
                             <h4>Ventajas</h4>
                             <ul>
                                 <li>Cortes de alta precisión con tolerancias mínimas</li>
@@ -181,11 +180,17 @@
                                 <li>Velocidad y eficiencia en la producción</li>
                                 <li>Versatilidad para trabajar con diferentes materiales y espesores</li>
                             </ul>
-                            <h4>Aplicaciones</h4>
-                            <p>Ideal para componentes de maquinaria, piezas arquitectónicas, señalética, mobiliario metálico y prototipos industriales.</p>
+                            <h4>APLICACIONES</h4>
+<ul>
+    <li>Componentes metálicos</li>
+    <li>Piezas decorativas</li>
+    <li>Estructuras</li>
+    <li>Cerramientos</li>
+    <li>Elementos de precisión</li>
+</ul>
                         </div>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)">VER MÁS</button>
+                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
 
                 <!-- Transporte y Logística -->
@@ -193,14 +198,14 @@
                     <div class="servicio-icon">
                         <img src="img/transporteylogistica.png" alt="Transporte y Logística" class="servicio-imagen">
                     </div>
-                    <h3 class="servicio-title">Transporte y Logística</h3>
+                    <h3 class="servicio-title">TRANSPORTE Y LOGÍSTICA</h3>
                     <div class="servicio-description">
                         <div class="servicio-summary">
                             <p>Servicio integral de logística y distribución que asegura que cada producto llegue a destino en tiempo y forma.</p>
                             <p>Optimizamos el manejo de mercadería, reduciendo costos y ofreciendo mayor comodidad a nuestros clientes.</p>
                             <p>Entregas diarias y programadas en toda la región.</p>
                         </div>
-                        <div class="servicio-full" style="display: none;">
+                        <div class="servicio-full">
                             <h4>Características del servicio</h4>
                             <ul>
                                 <li>Estructura operativa eficiente</li>
@@ -213,7 +218,7 @@
                             <p>Nuestro servicio de logística garantiza un manejo confiable, ágil y seguro de sus productos, respondiendo a las demandas actuales del mercado y asegurando la satisfacción de nuestros clientes.</p>
                         </div>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)">VER MÁS</button>
+                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
             </div>
         </div>
@@ -228,7 +233,7 @@
                     <div class="servicio-icon">
                         <i class="bi bi-wind"></i>
                     </div>
-                    <h3 class="servicio-title">Extractores Eólicos</h3>
+                    <h3 class="servicio-title">EXTRACTORES EÓLICOS</h3>
                     <div class="servicio-description">
                         <div class="servicio-summary">
                             <p><strong>El viento sopla a tu favor</strong></p>
@@ -236,8 +241,8 @@
                             <p>Funcionan las 24 horas del día sin requerir energía eléctrica, aprovechando la fuerza del viento y la diferencia de temperatura interior/exterior para mantener la temperatura ambiente equilibrada y libre de humedad.</p>
                             <p>Son ampliamente utilizados en tinglados, hangares, silos, depósitos, aulas, auditorios, fábricas, talleres, discotecas y galpones, garantizando un ambiente más seguro, fresco y confortable.</p>
                         </div>
-                        <div class="servicio-full" style="display: none;">
-                            <h4>Características Constructivas</h4>
+                        <div class="servicio-full">
+                            <h4>CARACTERÍSTICAS CONSTRUCTIVAS</h4>
                             <ul>
                                 <li>Construido íntegramente en chapa galvanizada.</li>
                                 <li>Eje montado sobre rodamientos blindados que aseguran un giro suave y duradero.</li>
@@ -247,7 +252,7 @@
                                 <li>Estas cualidades garantizan una larga vida útil y un excelente rendimiento incluso en condiciones exigentes.</li>
                             </ul>
 
-                            <h4>Características Generales</h4>
+                            <h4>CARACTERÍSTICAS GENERALES</h4>
                             <ul>
                                 <li>Funciona las 24 horas, sin requerir energía eléctrica.</li>
                                 <li>No requiere instalación específica ni mantenimiento.</li>
@@ -257,16 +262,16 @@
                                 <li>Garantía de 12 meses.</li>
                             </ul>
 
-                            <h4>Principio de Funcionamiento</h4>
+                            <h4>PRINCIPIO DE FUNCIONAMIENTO</h4>
                             <p>El extractor eólico utiliza el efecto del viento y la convección del aire caliente para generar movimiento continuo de extracción. El aire caliente y húmedo acumulado en la parte superior del ambiente es expulsado hacia el exterior, mientras que el aire fresco ingresa por las aberturas (puertas o ventanas), manteniendo una ventilación constante y natural.</p>
 
-                            <h4>Dimensiones y Modelos Disponibles</h4>
+                            <h4>DIMENSIONES Y MODELOS DISPONIBLES</h4>
                             <p>Los extractores eólicos CH se fabrican en distintos diámetros y alturas, adaptándose a las necesidades de cada proyecto.</p>
                             <p>Modelos disponibles: CH75, CH60, CH50, CH38, CH30, CH25, CH15.</p>
                             <p>Cada modelo varía según el diámetro de boca, altura y caudal de aire extraído según la velocidad del viento.</p>
                         </div>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)">VER MÁS</button>
+                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
             </div>
         </div>
@@ -530,16 +535,46 @@
 
         function toggleServicio(button) {
             const card = button.closest('.servicio-card');
-            
-            if (card.classList.contains('expanded')) {
+            const isExpanded = card.classList.contains('expanded');
+            const RELEASE_DELAY = 500; // tiempo suficiente para completar la transición
+
+            // Evitar múltiples clics durante la transición
+            button.disabled = true;
+
+            // Forzar un reflow para evitar problemas de timing
+            card.offsetHeight;
+
+            if (isExpanded) {
                 // Contraer
                 card.classList.remove('expanded');
                 button.textContent = 'VER MÁS';
+                button.setAttribute('aria-expanded', 'false');
             } else {
-                // Expandir
-                card.classList.add('expanded');
-                button.textContent = 'VER MENOS';
+                // Contraer cualquier otra tarjeta expandida para evitar confusiones
+                document.querySelectorAll('.servicio-card.expanded').forEach(other => {
+                    if (other !== card) {
+                        other.classList.remove('expanded');
+                        const otherBtn = other.querySelector('.ver-mas-btn');
+                        if (otherBtn) {
+                            otherBtn.textContent = 'VER MÁS';
+                            otherBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+
+                // Pequeño delay para asegurar que las otras tarjetas se contraigan primero
+                setTimeout(() => {
+                    // Expandir la tarjeta actual
+                    card.classList.add('expanded');
+                    button.textContent = 'VER MENOS';
+                    button.setAttribute('aria-expanded', 'true');
+                }, 50);
             }
+
+            // Rehabilitar el botón al finalizar la transición
+            setTimeout(() => {
+                button.disabled = false;
+            }, RELEASE_DELAY);
         }
     </script>
 </body>
