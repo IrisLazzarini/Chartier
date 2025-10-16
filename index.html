@@ -23,7 +23,6 @@
                 <ul class="nav-menu nav-menu-spaced" id="navMenu">
                     <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
                     <li><a href="#nosotros" onclick="closeMobileMenu()">Nosotros</a></li>
-                    <li><a href="#productos" onclick="closeMobileMenu()">Productos</a></li>
                     <li><a href="#servicios" onclick="closeMobileMenu()">Servicios</a></li>
                     <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
                 </ul>
@@ -319,57 +318,76 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Productos Section -->
-    <section id="productos" class="productos">
-        <div class="container">
-            <h2 class="section-title">Productos</h2>
-            <div class="productos-content">
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <i class="bi bi-wind"></i>
+            <!-- Servicio 5: Extractores Eólicos (Imagen Izquierda - Texto Derecha) -->
+            <div class="servicio-item servicio-imagen-izquierda">
+                <div class="servicio-imagen-container">
+                    <div class="servicio-imagen-wrapper">
+                        <img src="img/extractoreo.png" alt="Extractores Eólicos" class="servicio-imagen-full">
+                        <div class="imagen-overlay"></div>
+                        <!-- SVG decorativo -->
+                        <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <radialGradient id="grad5" cx="50%" cy="50%">
+                                    <stop offset="0%" style="stop-color:#FCEF13;stop-opacity:0.8" />
+                                    <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.6" />
+                                    <stop offset="100%" style="stop-color:#FCEF13;stop-opacity:0.2" />
+                                </radialGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="url(#grad5)" opacity="0.4"/>
+                            <path d="M100,30 L130,60 L170,50 L140,80 L160,120 L120,100 L100,140 L80,100 L40,120 L60,80 L30,50 L70,60 Z" fill="#FCEF13" opacity="0.5"/>
+                            <circle cx="100" cy="100" r="15" fill="#FCEF13" opacity="0.8"/>
+                            <circle cx="100" cy="100" r="60" stroke="#FCEF13" stroke-width="2" fill="none" opacity="0.6"/>
+                        </svg>
                     </div>
-                    <h3 class="servicio-title">EXTRACTORES EÓLICOS</h3>
-                    <div class="servicio-description">
-                        <div class="servicio-summary">
-                            <p><strong>El viento sopla a tu favor</strong></p>
-                            <p>Nuestros Extractores Eólicos son la solución ideal para mejorar la ventilación natural en todo tipo de espacios industriales, rurales y urbanos.</p>
-                            <p>Funcionan las 24 horas del día sin requerir energía eléctrica, aprovechando la fuerza del viento y la diferencia de temperatura interior/exterior para mantener la temperatura ambiente equilibrada y libre de humedad.</p>
-                            <p>Son ampliamente utilizados en tinglados, hangares, silos, depósitos, aulas, auditorios, fábricas, talleres, discotecas y galpones, garantizando un ambiente más seguro, fresco y confortable.</p>
+                </div>
+                <div class="servicio-contenido">
+                    <div class="servicio-contenido-inner">
+                        <h3 class="servicio-titulo">EXTRACTORES EÓLICOS</h3>
+                        <div class="servicio-texto">
+                            <div class="servicio-summary">
+                                <p><strong>El viento sopla a tu favor</strong></p>
+                                <p>Nuestros Extractores Eólicos son la solución ideal para mejorar la ventilación natural en todo tipo de espacios industriales, rurales y urbanos.</p>
+                                <p>Funcionan las 24 horas del día sin requerir energía eléctrica, aprovechando la fuerza del viento y la diferencia de temperatura interior/exterior para mantener la temperatura ambiente equilibrada y libre de humedad.</p>
+                                <p>Son ampliamente utilizados en tinglados, hangares, silos, depósitos, aulas, auditorios, fábricas, talleres, discotecas y galpones, garantizando un ambiente más seguro, fresco y confortable.</p>
+                            </div>
+                            <div class="servicio-full">
+                                <h4>CARACTERÍSTICAS CONSTRUCTIVAS</h4>
+                                <ul>
+                                    <li>Construido íntegramente en chapa galvanizada.</li>
+                                    <li>Eje montado sobre rodamientos blindados que aseguran un giro suave y duradero.</li>
+                                    <li>Eje de forma ramificada que otorga gran resistencia al efecto centrífugo.</li>
+                                    <li>Tapa, álabes y aros mecanizados para mayor resistencia y estética.</li>
+                                    <li>Alta resistencia a la corrosión, ideal para uso en zonas urbanas, rurales e industriales.</li>
+                                    <li>Estas cualidades garantizan una larga vida útil y un excelente rendimiento incluso en condiciones exigentes.</li>
+                                </ul>
+
+                                <h4>CARACTERÍSTICAS GENERALES</h4>
+                                <ul>
+                                    <li>Funciona las 24 horas, sin requerir energía eléctrica.</li>
+                                    <li>No requiere instalación específica ni mantenimiento.</li>
+                                    <li>Costo operativo y riesgo de incendio: cero.</li>
+                                    <li>No produce ruidos.</li>
+                                    <li>Bajo costo inicial y rápida amortización.</li>
+                                    <li>Garantía de 12 meses.</li>
+                                </ul>
+
+                                <h4>PRINCIPIO DE FUNCIONAMIENTO</h4>
+                                <p>El extractor eólico utiliza el efecto del viento y la convección del aire caliente para generar movimiento continuo de extracción. El aire caliente y húmedo acumulado en la parte superior del ambiente es expulsado hacia el exterior, mientras que el aire fresco ingresa por las aberturas (puertas o ventanas), manteniendo una ventilación constante y natural.</p>
+
+                                <h4>DIMENSIONES Y MODELOS DISPONIBLES</h4>
+                                <p>Los extractores eólicos CH se fabrican en distintos diámetros y alturas, adaptándose a las necesidades de cada proyecto.</p>
+                                <p>Modelos disponibles: CH75, CH60, CH50, CH38, CH30, CH25, CH15.</p>
+                                <p>Cada modelo varía según el diámetro de boca, altura y caudal de aire extraído según la velocidad del viento.</p>
+                            </div>
                         </div>
-                        <div class="servicio-full">
-                            <h4>CARACTERÍSTICAS CONSTRUCTIVAS</h4>
-                            <ul>
-                                <li>Construido íntegramente en chapa galvanizada.</li>
-                                <li>Eje montado sobre rodamientos blindados que aseguran un giro suave y duradero.</li>
-                                <li>Eje de forma ramificada que otorga gran resistencia al efecto centrífugo.</li>
-                                <li>Tapa, álabes y aros mecanizados para mayor resistencia y estética.</li>
-                                <li>Alta resistencia a la corrosión, ideal para uso en zonas urbanas, rurales e industriales.</li>
-                                <li>Estas cualidades garantizan una larga vida útil y un excelente rendimiento incluso en condiciones exigentes.</li>
-                            </ul>
-
-                            <h4>CARACTERÍSTICAS GENERALES</h4>
-                            <ul>
-                                <li>Funciona las 24 horas, sin requerir energía eléctrica.</li>
-                                <li>No requiere instalación específica ni mantenimiento.</li>
-                                <li>Costo operativo y riesgo de incendio: cero.</li>
-                                <li>No produce ruidos.</li>
-                                <li>Bajo costo inicial y rápida amortización.</li>
-                                <li>Garantía de 12 meses.</li>
-                            </ul>
-
-                            <h4>PRINCIPIO DE FUNCIONAMIENTO</h4>
-                            <p>El extractor eólico utiliza el efecto del viento y la convección del aire caliente para generar movimiento continuo de extracción. El aire caliente y húmedo acumulado en la parte superior del ambiente es expulsado hacia el exterior, mientras que el aire fresco ingresa por las aberturas (puertas o ventanas), manteniendo una ventilación constante y natural.</p>
-
-                            <h4>DIMENSIONES Y MODELOS DISPONIBLES</h4>
-                            <p>Los extractores eólicos CH se fabrican en distintos diámetros y alturas, adaptándose a las necesidades de cada proyecto.</p>
-                            <p>Modelos disponibles: CH75, CH60, CH50, CH38, CH30, CH25, CH15.</p>
-                            <p>Cada modelo varía según el diámetro de boca, altura y caudal de aire extraído según la velocidad del viento.</p>
-                        </div>
+                        <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
+                            <span>VER MÁS</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
             </div>
         </div>
