@@ -103,127 +103,220 @@
 
     <!-- Servicios Section -->
     <section id="servicios" class="servicios">
-        <div class="container">
+        <div class="container-fluid">
             <h2 class="section-title">Servicios</h2>
-            <div class="servicios-grid">
-                <!-- Corte y Plegado -->
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <img src="img/PLEGADOS.png" alt="Corte y Plegado" class="servicio-imagen">
+            
+            <!-- Servicio 1: Corte y Plegado (Imagen Izquierda - Texto Derecha) -->
+            <div class="servicio-item servicio-imagen-izquierda">
+                <div class="servicio-imagen-container">
+                    <div class="servicio-imagen-wrapper">
+                        <img src="img/plegadora.png" alt="Corte y Plegado" class="servicio-imagen-full">
+                        <div class="imagen-overlay"></div>
+                        <!-- SVG decorativo -->
+                        <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FCEF13;stop-opacity:0.6" />
+                                    <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.3" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M50,20 L150,20 L180,100 L150,180 L50,180 L20,100 Z" fill="url(#grad1)" opacity="0.3"/>
+                            <circle cx="100" cy="100" r="60" stroke="#FCEF13" stroke-width="2" fill="none" opacity="0.5"/>
+                        </svg>
                     </div>
-                    <h3 class="servicio-title">CORTE Y PLEGADO</h3>
-                    <div class="servicio-description">
-                        <div class="servicio-summary">
-                            <p>En Hojalatería Chartier SRL comercializamos una amplia línea de chapas de acero.</p>
-                            <p>Ofrecemos el más completo servicio de plegado, junto con corte por guillotina, corte por plasma y cilindrado, abarcando espesores de 0,30 mm a 8 mm, en medidas de hasta 6 metros de largo.</p>
-                        </div>
-                        <div class="servicio-full">
-                            <p>En Hojalatería Chartier SRL comercializamos una amplia línea de chapas de acero:</p>
-                            <ul>
-                                <li>Galvanizadas</li>
-                                <li>Cincalum</li>
-                                <li>Prepintadas (en toda su gama de colores)</li>
-                                <li>Laminadas en caliente y en frío</li>
-                                <li>Aceros especiales</li>
-                                <li>Estampadas</li>
-                                <li>Perforadas</li>
-                                <li>Inoxidables en distintas calidades</li>
-                            </ul>
-                            <p>Disponemos de todos los espesores, desde 0,30 mm hasta 6 mm, en hojas y bobinas de diferentes anchos.</p>
-                            <p>Ofrecemos el más completo servicio de plegado, junto con corte por guillotina, corte por plasma y cilindrado, abarcando espesores de 0,30 mm a 8 mm, en medidas de hasta 6 metros de largo.</p>
-                            <p>Nuestro trabajo está orientado a satisfacer las necesidades del mercado metalúrgico mediante la fabricación de piezas a medida, planos bajos, piezas semielaboradas, repuestos y componentes adaptados a cada requerimiento.</p>
-                            <p>Abastecemos a diversos sectores: industrias metalúrgicas, agroindustrias, talleres de reparación, carrocerías, aberturas, fábricas de gabinetes, implementos agrícolas, constructoras, frigoríficos, entre otros.</p>
-                            <p>La capacidad, experiencia, calidad y responsabilidad de nuestro equipo profesional nos han posicionado como un referente en el mercado zonal y regional.</p>
-                        </div>
-                    </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
-
-                <!-- Corte Plasma -->
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <img src="img/corte.png" alt="Corte Plasma" class="servicio-imagen">
-                    </div>
-                    <h3 class="servicio-title">CORTE PLASMA</h3>
-                    <div class="servicio-description">
-                        <div class="servicio-summary">
-                            <p>Corte Plasma</p>
-                            <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
-                            <p>En Hojalatería Chartier SRL disponemos de equipos de plasma de alta definición, adecuados para el procesamiento de aceros de distintos espesores, con una excelente relación entre velocidad, calidad de corte y costo operativo.</p>
-                            <p>Este sistema es especialmente eficiente para trabajos estructurales, piezas industriales y componentes de gran formato, donde se requiere robustez y productividad sin comprometer la calidad final.</p>
-                            <p>Aplicaciones: estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
+                <div class="servicio-contenido">
+                    <div class="servicio-contenido-inner">
+                        <h3 class="servicio-titulo">CORTE Y PLEGADO</h3>
+                        <div class="servicio-texto">
+                            <div class="servicio-summary">
+                                <p>En Hojalatería Chartier SRL comercializamos una amplia línea de chapas de acero.</p>
+                                <p>Ofrecemos el más completo servicio de plegado, junto con corte por guillotina, corte por plasma y cilindrado, abarcando espesores de 0,30 mm a 8 mm, en medidas de hasta 6 metros de largo.</p>
+                            </div>
+                            <div class="servicio-full">
+                                <p>En Hojalatería Chartier SRL comercializamos una amplia línea de chapas de acero:</p>
+                                <ul>
+                                    <li>Galvanizadas</li>
+                                    <li>Cincalum</li>
+                                    <li>Prepintadas (en toda su gama de colores)</li>
+                                    <li>Laminadas en caliente y en frío</li>
+                                    <li>Aceros especiales</li>
+                                    <li>Estampadas</li>
+                                    <li>Perforadas</li>
+                                    <li>Inoxidables en distintas calidades</li>
+                                </ul>
+                                <p>Disponemos de todos los espesores, desde 0,30 mm hasta 6 mm, en hojas y bobinas de diferentes anchos.</p>
+                                <p>Ofrecemos el más completo servicio de plegado, junto con corte por guillotina, corte por plasma y cilindrado, abarcando espesores de 0,30 mm a 8 mm, en medidas de hasta 6 metros de largo.</p>
+                                <p>Nuestro trabajo está orientado a satisfacer las necesidades del mercado metalúrgico mediante la fabricación de piezas a medida, planos bajos, piezas semielaboradas, repuestos y componentes adaptados a cada requerimiento.</p>
+                                <p>Abastecemos a diversos sectores: industrias metalúrgicas, agroindustrias, talleres de reparación, carrocerías, aberturas, fábricas de gabinetes, implementos agrícolas, constructoras, frigoríficos, entre otros.</p>
+                                <p>La capacidad, experiencia, calidad y responsabilidad de nuestro equipo profesional nos han posicionado como un referente en el mercado zonal y regional.</p>
+                            </div>
                         </div>
-                        <div class="servicio-full">
-                            <p>Corte Plasma</p>
-                            <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
-                            <p>En Hojalatería Chartier SRL disponemos de equipos de plasma de alta definición, adecuados para el procesamiento de aceros de distintos espesores, con una excelente relación entre velocidad, calidad de corte y costo operativo.</p>
-                            <p>Este sistema es especialmente eficiente para trabajos estructurales, piezas industriales y componentes de gran formato, donde se requiere robustez y productividad sin comprometer la calidad final.</p>
-                            <p>Aplicaciones: estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
-                        </div>
+                        <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
+                            <span>VER MÁS</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
+            </div>
 
-                <!-- Corte Láser -->
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <img src="img/corte.png" alt="Corte Láser" class="servicio-imagen">
-                    </div>
-                    <h3 class="servicio-title">CORTE LÁSER</h3>
-                    <div class="servicio-description">
-                        <div class="servicio-summary">
-                            <p>El corte láser es un proceso de manufactura avanzada que permite obtener piezas metálicas con una precisión dimensional milimétrica y acabado de alta calidad.</p>
-                            <p>En Hojalatería Chartier SRL contamos con equipamiento de tecnología láser de última generación, capaz de realizar cortes complejos en acero al carbono, inoxidable y galvanizado, garantizando una excelente repetitividad y mínima deformación térmica del material.</p>
-                            <p>Esta tecnología ofrece alta velocidad de producción, reducción de desperdicios y óptima eficiencia energética.</p>
-                        </div>
-                        <div class="servicio-full">
-                            <h4>Ventajas</h4>
-                            <ul>
-                                <li>Cortes de alta precisión con tolerancias mínimas</li>
-                                <li>Acabados de excelente calidad sin rebabas</li>
-                                <li>Capacidad para realizar diseños complejos</li>
-                                <li>Velocidad y eficiencia en la producción</li>
-                                <li>Versatilidad para trabajar con diferentes materiales y espesores</li>
-                            </ul>
-                            <h4>APLICACIONES</h4>
-                            <ul>
-                                <li>Componentes metálicos</li>
-                                <li>Piezas decorativas</li>
-                                <li>Estructuras</li>
-                                <li>Cerramientos</li>
-                                <li>Elementos de precisión</li>
-                            </ul>
+            <!-- Servicio 2: Corte Plasma (Texto Izquierda - Imagen Derecha) -->
+            <div class="servicio-item servicio-texto-izquierda">
+                <div class="servicio-contenido">
+                    <div class="servicio-contenido-inner">
+                        <h3 class="servicio-titulo">CORTE PLASMA</h3>
+                        <div class="servicio-texto">
+                            <div class="servicio-summary">
+                                <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
+                                <p>En Hojalatería Chartier SRL disponemos de equipos de plasma de alta definición, adecuados para el procesamiento de aceros de distintos espesores, con una excelente relación entre velocidad, calidad de corte y costo operativo.</p>
+                                <p>Este sistema es especialmente eficiente para trabajos estructurales, piezas industriales y componentes de gran formato, donde se requiere robustez y productividad sin comprometer la calidad final.</p>
+                                <p><strong>Aplicaciones:</strong> estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
+                            </div>
+                            <div class="servicio-full">
+                                    <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
+                                <p>En Hojalatería Chartier SRL disponemos de equipos de plasma de alta definición, adecuados para el procesamiento de aceros de distintos espesores, con una excelente relación entre velocidad, calidad de corte y costo operativo.</p>
+                                <p>Este sistema es especialmente eficiente para trabajos estructurales, piezas industriales y componentes de gran formato, donde se requiere robustez y productividad sin comprometer la calidad final.</p>
+                                <p><strong>Aplicaciones:</strong> estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
+                            
+                            </div>
+                            <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
+                            <span>VER MÁS</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                         </div>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
                 </div>
+                <div class="servicio-imagen-container">
+                    <div class="servicio-imagen-wrapper">
+                        <img src="img/plasmcutter.png" alt="Corte Plasma" class="servicio-imagen-full">
+                        <div class="imagen-overlay"></div>
+                        <!-- SVG decorativo -->
+                        <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <radialGradient id="grad2">
+                                    <stop offset="0%" style="stop-color:#FCEF13;stop-opacity:0.6" />
+                                    <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0" />
+                                </radialGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="80" fill="url(#grad2)" opacity="0.4"/>
+                            <polygon points="100,40 130,90 180,100 130,110 100,160 70,110 20,100 70,90" fill="#FCEF13" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Transporte y Logística -->
-                <div class="servicio-card">
-                    <div class="servicio-icon">
-                        <img src="img/transporteylogistica.png" alt="Transporte y Logística" class="servicio-imagen">
+            <!-- Servicio 3: Corte Láser (Imagen Izquierda - Texto Derecha) -->
+            <div class="servicio-item servicio-imagen-izquierda">
+                <div class="servicio-imagen-container">
+                    <div class="servicio-imagen-wrapper">
+                        <img src="img/lasercutter.png" alt="Corte Láser" class="servicio-imagen-full">
+                        <div class="imagen-overlay"></div>
+                        <!-- SVG decorativo -->
+                        <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FCEF13;stop-opacity:0.7" />
+                                    <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.5" />
+                                    <stop offset="100%" style="stop-color:#FCEF13;stop-opacity:0.7" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="30" y="30" width="140" height="140" fill="url(#grad3)" opacity="0.3" transform="rotate(45 100 100)"/>
+                            <line x1="20" y1="100" x2="180" y2="100" stroke="#FCEF13" stroke-width="3" opacity="0.6"/>
+                            <line x1="100" y1="20" x2="100" y2="180" stroke="#FCEF13" stroke-width="3" opacity="0.6"/>
+                        </svg>
                     </div>
-                    <h3 class="servicio-title">TRANSPORTE Y LOGÍSTICA</h3>
-                    <div class="servicio-description">
-                        <div class="servicio-summary">
-                            <p>Servicio integral de logística y distribución que asegura que cada producto llegue a destino en tiempo y forma.</p>
-                            <p>Optimizamos el manejo de mercadería, reduciendo costos y ofreciendo mayor comodidad a nuestros clientes.</p>
-                            <p>Entregas diarias y programadas en toda la región.</p>
+                </div>
+                <div class="servicio-contenido">
+                    <div class="servicio-contenido-inner">
+                        <h3 class="servicio-titulo">CORTE LÁSER</h3>
+                        <div class="servicio-texto">
+                            <div class="servicio-summary">
+                                <p>El corte láser es un proceso de manufactura avanzada que permite obtener piezas metálicas con una precisión dimensional milimétrica y acabado de alta calidad.</p>
+                                <p>En Hojalatería Chartier SRL contamos con equipamiento de tecnología láser de última generación, capaz de realizar cortes complejos en acero al carbono, inoxidable y galvanizado, garantizando una excelente repetitividad y mínima deformación térmica del material.</p>
+                                <p>Esta tecnología ofrece alta velocidad de producción, reducción de desperdicios y óptima eficiencia energética.</p>
+                            </div>
+                            <div class="servicio-full">
+                                <h4>Ventajas</h4>
+                                <ul>
+                                    <li>Cortes de alta precisión con tolerancias mínimas</li>
+                                    <li>Acabados de excelente calidad sin rebabas</li>
+                                    <li>Capacidad para realizar diseños complejos</li>
+                                    <li>Velocidad y eficiencia en la producción</li>
+                                    <li>Versatilidad para trabajar con diferentes materiales y espesores</li>
+                                </ul>
+                                <h4>APLICACIONES</h4>
+                                <ul>
+                                    <li>Componentes metálicos</li>
+                                    <li>Piezas decorativas</li>
+                                    <li>Estructuras</li>
+                                    <li>Cerramientos</li>
+                                    <li>Elementos de precisión</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="servicio-full">
-                            <h4>Características del servicio</h4>
-                            <ul>
-                                <li>Estructura operativa eficiente</li>
-                                <li>Red de distribución regional</li>
-                                <li>Entregas programadas y puntuales</li>
-                                <li>Manejo seguro de mercadería</li>
-                                <li>Seguimiento de envíos</li>
-                            </ul>
-                            <h4>Beneficios</h4>
-                            <p>Nuestro servicio de logística garantiza un manejo confiable, ágil y seguro de sus productos, respondiendo a las demandas actuales del mercado y asegurando la satisfacción de nuestros clientes.</p>
-                        </div>
+                        <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
+                            <span>VER MÁS</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="ver-mas-btn" onclick="toggleServicio(this)" aria-expanded="false">VER MÁS</button>
+                </div>
+            </div>
+
+            <!-- Servicio 4: Transporte y Logística (Texto Izquierda - Imagen Derecha) -->
+            <div class="servicio-item servicio-texto-izquierda">
+                <div class="servicio-contenido">
+                    <div class="servicio-contenido-inner">
+                        <h3 class="servicio-titulo">TRANSPORTE Y LOGÍSTICA</h3>
+                        <div class="servicio-texto">
+                            <div class="servicio-summary">
+                                <p>Servicio integral de logística y distribución que asegura que cada producto llegue a destino en tiempo y forma.</p>
+                                <p>Optimizamos el manejo de mercadería, reduciendo costos y ofreciendo mayor comodidad a nuestros clientes.</p>
+                                <p>Entregas diarias y programadas en toda la región.</p>
+                            </div>
+                            <div class="servicio-full">
+                                <h4>Características del servicio</h4>
+                                <ul>
+                                    <li>Estructura operativa eficiente</li>
+                                    <li>Red de distribución regional</li>
+                                    <li>Entregas programadas y puntuales</li>
+                                    <li>Manejo seguro de mercadería</li>
+                                    <li>Seguimiento de envíos</li>
+                                </ul>
+                                <h4>Beneficios</h4>
+                                <p>Nuestro servicio de logística garantiza un manejo confiable, ágil y seguro de sus productos, respondiendo a las demandas actuales del mercado y asegurando la satisfacción de nuestros clientes.</p>
+                            </div>
+                        </div>
+                        <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
+                            <span>VER MÁS</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="servicio-imagen-container">
+                    <div class="servicio-imagen-wrapper">
+                        <img src="img/logi.png" alt="Transporte y Logística" class="servicio-imagen-full">
+                        <div class="imagen-overlay"></div>
+                        <!-- SVG decorativo -->
+                        <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="grad4" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FCEF13;stop-opacity:0.5" />
+                                    <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.8" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M100,20 L180,70 L180,130 L100,180 L20,130 L20,70 Z" fill="url(#grad4)" opacity="0.35"/>
+                            <circle cx="100" cy="100" r="40" stroke="#FCEF13" stroke-width="3" fill="none" opacity="0.6"/>
+                            <circle cx="100" cy="100" r="70" stroke="#FCEF13" stroke-width="2" fill="none" opacity="0.4"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -580,6 +673,48 @@
             setTimeout(() => {
                 button.disabled = false;
             }, RELEASE_DELAY);
+        }
+
+        // Nueva función para el diseño intercalado
+        function toggleServicioNuevo(button) {
+            const item = button.closest('.servicio-item');
+            const isExpanded = item.classList.contains('expanded');
+            const textoDiv = item.querySelector('.servicio-texto');
+            const btnSpan = button.querySelector('span');
+            const btnArrow = button.querySelector('.btn-arrow');
+
+            if (isExpanded) {
+                // Contraer
+                item.classList.remove('expanded');
+                btnSpan.textContent = 'VER MÁS';
+                button.setAttribute('aria-expanded', 'false');
+                if (btnArrow) {
+                    btnArrow.style.transform = 'rotate(0deg)';
+                }
+            } else {
+                // Contraer otros servicios expandidos
+                document.querySelectorAll('.servicio-item.expanded').forEach(other => {
+                    if (other !== item) {
+                        other.classList.remove('expanded');
+                        const otherBtn = other.querySelector('.ver-mas-btn-nuevo');
+                        if (otherBtn) {
+                            const otherSpan = otherBtn.querySelector('span');
+                            const otherArrow = otherBtn.querySelector('.btn-arrow');
+                            if (otherSpan) otherSpan.textContent = 'VER MÁS';
+                            otherBtn.setAttribute('aria-expanded', 'false');
+                            if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+
+                // Expandir
+                item.classList.add('expanded');
+                btnSpan.textContent = 'VER MENOS';
+                button.setAttribute('aria-expanded', 'true');
+                if (btnArrow) {
+                    btnArrow.style.transform = 'rotate(180deg)';
+                }
+            }
         }
     </script>
 </body>
