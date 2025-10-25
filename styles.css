@@ -279,7 +279,6 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 15px;
     }
 
-    .hero-bg-image,
     .carousel-image {
         object-position: center 35% !important;
         object-fit: cover !important;
@@ -622,14 +621,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.hero-bg-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    filter: blur(0.5px) brightness(1.15);
-}
-
 /* Carousel images */
 .carousel-image {
     position: absolute;
@@ -637,6 +628,9 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: blur(0.5px) brightness(1.15);
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
@@ -647,14 +641,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Ajustes responsive para imágenes de fondo del hero */
 @media (max-width: 1200px) {
-    .hero-bg-image,
     .carousel-image {
         object-position: center center;
     }
 }
 
 @media (max-width: 992px) {
-    .hero-bg-image,
     .carousel-image {
         object-position: center 40%;
     }
@@ -2495,7 +2487,6 @@ section {
         display: none;
     }
 
-    .hero-bg-image,
     .carousel-image {
         filter: blur(1px) brightness(1.15) !important;
         object-position: center 30% !important;
