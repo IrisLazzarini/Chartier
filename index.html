@@ -17,7 +17,7 @@
                 <div class="logo">
                     <div class="logo-text">CHARTIER</div>
                 </div>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menú">
                     <i class="bi bi-list"></i>
                 </button>
                 <ul class="nav-menu nav-menu-spaced" id="navMenu">
@@ -28,6 +28,7 @@
                 </ul>
             </div>
         </nav>
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
     </header>
 
     <!-- Hero Section -->
@@ -559,9 +560,9 @@
     <script>
         // Mobile Menu Toggle
         function toggleMobileMenu() {
-            console.log('toggleMobileMenu called');
             const navMenu = document.getElementById('navMenu');
             const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.getElementById('menuOverlay');
 
             if (!navMenu || !mobileBtn) {
                 console.error('Menu elements not found');
@@ -569,30 +570,33 @@
             }
 
             navMenu.classList.toggle('active');
-            console.log('Menu active class:', navMenu.classList.contains('active'));
 
-            // Animate hamburger icon
+            // Animate hamburger icon and overlay
             if (navMenu.classList.contains('active')) {
                 mobileBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
-                mobileBtn.style.transform = 'rotate(90deg)';
+                mobileBtn.setAttribute('aria-label', 'Cerrar menú');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                console.log('Menu opened');
+                if (overlay) overlay.classList.add('active');
             } else {
                 mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
-                mobileBtn.style.transform = 'rotate(0deg)';
+                mobileBtn.setAttribute('aria-label', 'Abrir menú');
                 document.body.style.overflow = 'auto';
-                console.log('Menu closed');
+                if (overlay) overlay.classList.remove('active');
             }
         }
 
         function closeMobileMenu() {
             const navMenu = document.getElementById('navMenu');
             const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.getElementById('menuOverlay');
 
+            if (!navMenu || !mobileBtn) return;
+            
             navMenu.classList.remove('active');
             mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
-            mobileBtn.style.transform = 'rotate(0deg)';
+            mobileBtn.setAttribute('aria-label', 'Abrir menú');
             document.body.style.overflow = 'auto';
+            if (overlay) overlay.classList.remove('active');
         }
 
         // Close mobile menu when clicking outside
