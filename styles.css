@@ -279,6 +279,16 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 15px;
     }
 
+    .hero-bg-image,
+    .carousel-image {
+        object-position: center 35% !important;
+        object-fit: cover !important;
+    }
+
+    .hero-background {
+        opacity: 0.4 !important;
+    }
+
     .hero-badge {
         margin-top: 20px;
         margin-bottom: 25px;
@@ -602,15 +612,56 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     z-index: 0;
-    opacity: 0.3;
+    opacity: 0.45;
+}
+
+/* Hero carousel */
+.hero-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .hero-bg-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    filter: blur(1px);
+    object-position: center center;
+    filter: blur(0.5px) brightness(1.15);
+}
+
+/* Carousel images */
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Ajustes responsive para imágenes de fondo del hero */
+@media (max-width: 1200px) {
+    .hero-bg-image,
+    .carousel-image {
+        object-position: center center;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-bg-image,
+    .carousel-image {
+        object-position: center 40%;
+    }
+    
+    .hero-background {
+        opacity: 0.4;
+    }
 }
 
 .hero::before {
@@ -1257,10 +1308,6 @@ section {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-}
-
-.servicio-card:hover::before {
-    /* left: 100%; */
 }
 
 .servicio-card:hover {
@@ -2448,9 +2495,15 @@ section {
         display: none;
     }
 
-    .hero-bg-image {
-        filter: blur(2px);
-        opacity: 0.2;
+    .hero-bg-image,
+    .carousel-image {
+        filter: blur(1px) brightness(1.15) !important;
+        object-position: center 30% !important;
+        object-fit: cover !important;
+    }
+    
+    .hero-background {
+        opacity: 0.35 !important;
     }
 
     /* Secciones generales */
@@ -3389,7 +3442,8 @@ textarea:focus {
 .servicio-imagen-container {
     position: relative;
     overflow: hidden;
-    min-height: 500px;
+    min-height: 400px;
+    max-height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3405,6 +3459,7 @@ textarea:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 2;
@@ -3657,7 +3712,8 @@ textarea:focus {
     }
 
     .servicio-imagen-container {
-        min-height: 450px;
+        min-height: 350px;
+        max-height: 400px;
     }
 }
 
@@ -3674,7 +3730,8 @@ textarea:focus {
     }
 
     .servicio-imagen-container {
-        min-height: 350px;
+        min-height: 300px;
+        max-height: 350px;
     }
 
     .imagen-overlay {
@@ -3727,7 +3784,8 @@ textarea:focus {
     }
 
     .servicio-imagen-container {
-        min-height: 280px;
+        min-height: 250px;
+        max-height: 280px;
     }
 
     .servicio-contenido {

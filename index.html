@@ -33,7 +33,11 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-background">
-            <img src="img/FONDODOOTER/METALURGICA.png" alt="Planta Industrial Hojalatería Chartier" class="hero-bg-image">
+            <div class="hero-carousel">
+                <img src="img/Fondo.jpeg" alt="Planta Industrial Hojalatería Chartier" class="hero-bg-image carousel-image active">
+                <img src="img/Fondo2.jpeg" alt="Instalaciones Hojalatería Chartier" class="hero-bg-image carousel-image">
+                <img src="img/fondo3.jpeg" alt="Tecnología Hojalatería Chartier" class="hero-bg-image carousel-image">
+            </div>
         </div>
         <div class="hero-particles">
             <div class="particle"></div>
@@ -61,7 +65,7 @@
                 <p class="hero-subtitle">Liderando el mercado metalúrgico con innovación, tecnología de vanguardia y excelencia en cada proyecto</p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">38+</span>
+                        <span class="stat-number">40+</span>
                         <span class="stat-label">Años de experiencia</span>
                     </div>
                     <div class="stat-item">
@@ -109,7 +113,7 @@
             <div class="servicio-item servicio-imagen-izquierda">
                 <div class="servicio-imagen-container">
                     <div class="servicio-imagen-wrapper">
-                        <img src="img/plegadora.png" alt="Corte y Plegado" class="servicio-imagen-full">
+                        <img src="img/Plegadoycorte.jpeg" alt="Corte y Plegado" class="servicio-imagen-full">
                         <div class="imagen-overlay"></div>
                         <!-- SVG decorativo -->
                         <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -191,7 +195,7 @@
                 </div>
                 <div class="servicio-imagen-container">
                     <div class="servicio-imagen-wrapper">
-                        <img src="img/plasmcutter.png" alt="Corte Plasma" class="servicio-imagen-full">
+                        <img src="img/Corteplasma.jpeg" alt="Corte Plasma" class="servicio-imagen-full">
                         <div class="imagen-overlay"></div>
                         <!-- SVG decorativo -->
                         <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -212,7 +216,7 @@
             <div class="servicio-item servicio-imagen-izquierda">
                 <div class="servicio-imagen-container">
                     <div class="servicio-imagen-wrapper">
-                        <img src="img/lasercutter.png" alt="Corte Láser" class="servicio-imagen-full">
+                        <img src="img/Laser.jpeg" alt="Corte Láser" class="servicio-imagen-full">
                         <div class="imagen-overlay"></div>
                         <!-- SVG decorativo -->
                         <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -301,7 +305,7 @@
                 </div>
                 <div class="servicio-imagen-container">
                     <div class="servicio-imagen-wrapper">
-                        <img src="img/logi.png" alt="Transporte y Logística" class="servicio-imagen-full">
+                        <img src="img/Logistica.jpeg" alt="Transporte y Logística" class="servicio-imagen-full">
                         <div class="imagen-overlay"></div>
                         <!-- SVG decorativo -->
                         <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +327,7 @@
             <div class="servicio-item servicio-imagen-izquierda">
                 <div class="servicio-imagen-container">
                     <div class="servicio-imagen-wrapper">
-                        <img src="img/extractoreo.png" alt="Extractores Eólicos" class="servicio-imagen-full">
+                        <img src="img/Eolicos.jpeg" alt="Extractores Eólicos" class="servicio-imagen-full">
                         <div class="imagen-overlay"></div>
                         <!-- SVG decorativo -->
                         <svg class="servicio-svg-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -629,8 +633,8 @@
                             `Teléfono: ${telefono || 'No proporcionado'}\n\n` +
                             `Mensaje:\n${mensaje}`;
 
-            // Create mailto link
-            const mailtoLink = `mailto:contacto@hojalateriachartier.com.ar?subject=Consulta desde la web - ${nombre}&body=${encodeURIComponent(emailBody)}`;
+            // Create mailto link with multiple recipients
+            const mailtoLink = `mailto:contacto@hojalateriachartier.com.ar,hojalateriachartier@gmail.com?subject=Consulta desde la web - ${nombre}&body=${encodeURIComponent(emailBody)}`;
 
             // Open email client
             window.location.href = mailtoLink;
@@ -734,6 +738,28 @@
                 }
             }
         }
+
+        // Hero Carousel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
     </script>
 </body>
 </html>
