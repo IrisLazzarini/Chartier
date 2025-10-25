@@ -179,19 +179,18 @@
                                 <p><strong>Aplicaciones:</strong> estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
                             </div>
                             <div class="servicio-full">
-                                    <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
+                                <p>El corte por plasma es un proceso térmico que utiliza un chorro de gas ionizado a alta temperatura para realizar cortes rápidos y precisos en materiales conductores.</p>
                                 <p>En Hojalatería Chartier SRL disponemos de equipos de plasma de alta definición, adecuados para el procesamiento de aceros de distintos espesores, con una excelente relación entre velocidad, calidad de corte y costo operativo.</p>
                                 <p>Este sistema es especialmente eficiente para trabajos estructurales, piezas industriales y componentes de gran formato, donde se requiere robustez y productividad sin comprometer la calidad final.</p>
                                 <p><strong>Aplicaciones:</strong> estructuras metálicas, maquinarias, carrocerías, montajes industriales y proyectos a medida.</p>
-                            
                             </div>
-                            <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
+                        </div>
+                        <button class="ver-mas-btn-nuevo" onclick="toggleServicioNuevo(this)" aria-expanded="false">
                             <span>VER MÁS</span>
                             <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                        </div>
                     </div>
                 </div>
                 <div class="servicio-imagen-container">
@@ -560,43 +559,60 @@
     <script>
         // Mobile Menu Toggle
         function toggleMobileMenu() {
+            console.log('toggleMobileMenu called'); // Debug log
+            
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.getElementById('menuOverlay');
+
+            console.log('Elements found:', { navMenu, mobileBtn, overlay }); // Debug log
+
+            if (!navMenu || !mobileBtn) {
+                console.error('Menu elements not found:', { navMenu, mobileBtn });
+                return;
+            }
+
+            const isActive = navMenu.classList.contains('active');
+            console.log('Current state - isActive:', isActive); // Debug log
+
+            if (isActive) {
+                // Close menu
+                navMenu.classList.remove('active');
+                mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
+                mobileBtn.setAttribute('aria-label', 'Abrir menú');
+                document.body.style.overflow = 'auto';
+                if (overlay) overlay.classList.remove('active');
+                console.log('Menu closed'); // Debug log
+            } else {
+                // Open menu
+                navMenu.classList.add('active');
+                mobileBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+                mobileBtn.setAttribute('aria-label', 'Cerrar menú');
+                document.body.style.overflow = 'hidden';
+                if (overlay) overlay.classList.add('active');
+                console.log('Menu opened'); // Debug log
+            }
+        }
+
+        function closeMobileMenu() {
+            console.log('closeMobileMenu called'); // Debug log
+            
             const navMenu = document.getElementById('navMenu');
             const mobileBtn = document.querySelector('.mobile-menu-btn');
             const overlay = document.getElementById('menuOverlay');
 
             if (!navMenu || !mobileBtn) {
-                console.error('Menu elements not found');
+                console.error('Menu elements not found in closeMobileMenu:', { navMenu, mobileBtn });
                 return;
             }
-
-            navMenu.classList.toggle('active');
-
-            // Animate hamburger icon and overlay
-            if (navMenu.classList.contains('active')) {
-                mobileBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
-                mobileBtn.setAttribute('aria-label', 'Cerrar menú');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                if (overlay) overlay.classList.add('active');
-            } else {
-                mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
-                mobileBtn.setAttribute('aria-label', 'Abrir menú');
-                document.body.style.overflow = 'auto';
-                if (overlay) overlay.classList.remove('active');
-            }
-        }
-
-        function closeMobileMenu() {
-            const navMenu = document.getElementById('navMenu');
-            const mobileBtn = document.querySelector('.mobile-menu-btn');
-            const overlay = document.getElementById('menuOverlay');
-
-            if (!navMenu || !mobileBtn) return;
             
             navMenu.classList.remove('active');
             mobileBtn.innerHTML = '<i class="bi bi-list"></i>';
             mobileBtn.setAttribute('aria-label', 'Abrir menú');
             document.body.style.overflow = 'auto';
             if (overlay) overlay.classList.remove('active');
+            
+            console.log('Menu closed via closeMobileMenu'); // Debug log
         }
 
         // Close mobile menu when clicking outside
@@ -764,6 +780,34 @@
 
         // Auto-advance carousel every 5 seconds
         setInterval(nextSlide, 5000);
+
+        // Additional mobile menu event listeners for better compatibility
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up mobile menu'); // Debug log
+            
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (mobileBtn) {
+                console.log('Mobile button found:', mobileBtn); // Debug log
+                
+                // Add click event listener as backup
+                mobileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Mobile button clicked via event listener'); // Debug log
+                    toggleMobileMenu();
+                });
+            } else {
+                console.error('Mobile button not found on DOM load');
+            }
+            
+            if (navMenu) {
+                console.log('Nav menu found:', navMenu); // Debug log
+            } else {
+                console.error('Nav menu not found on DOM load');
+            }
+        });
     </script>
 </body>
 </html>
