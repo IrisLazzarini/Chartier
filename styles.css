@@ -74,11 +74,11 @@ h1, h2, h3, h4, h5, h6 {
 .nav-container {
     /* max-width: 1200px; */
     margin: 0.5rem auto;
-    padding: 0 30px;
+    padding: 10px 30px; /* <--- CAMBIO CLAVE: Usa padding en lugar de height */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    /* height: 80px; <--- ELIMINAR O COMENTAR */
     position: relative;
     width: 100%;
 }
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Botón de menú móvil */
 .mobile-menu-btn {
     display: none;
-    background: linear-gradient(145deg, rgba(252, 239, 19, 0.1) 0%, rgba(252, 239, 19, 0.05) 100%);
+    background: linear-gradient(145deg, rgba(252, 239, 19, 0.12) 0%, rgba(252, 239, 19, 0.06) 100%);
     border: 2px solid var(--color-accent);
     border-radius: 12px;
     color: var(--color-accent);
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-50%);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(252, 239, 19, 0.2);
+    box-shadow: 0 4px 15px rgba(252, 239, 19, 0.17);
     z-index: 1001;
 }
 
@@ -171,7 +171,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-menu-btn:active {
-    transform: translateY(-50%) scale(0.95);
+    background: var(--color-accent);
+    box-shadow: 0 1px 8px #fcef135a;
 }
 
 /* Menu overlay */
@@ -197,13 +198,13 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     /* Header y navegación móvil */
     .header {
-        height: 70px;
+        /* height: 70px; <--- ELIMINAR O COMENTAR */
     }
 
     .nav-container {
         flex-direction: row;
-        height: 70px;
-        padding: 0 15px;
+        /* height: 70px; <--- ELIMINAR O COMENTAR */
+        padding: 10px 15px; /* <--- AJUSTA EL PADDING EN MÓVIL */
         position: relative;
         justify-content: space-between;
         align-items: center;
@@ -4035,4 +4036,73 @@ textarea:focus {
 }
 .productos-card.wow.fadeInUp {
   animation: fadeInUp 1s cubic-bezier(.22, .68, .5, 1.01);
+}
+
+.hamburger-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.menu-icon-svg {
+  width: 32px;
+  height: 32px;
+}
+.bar {
+  fill: var(--color-accent);
+  transition: transform .34s cubic-bezier(.7,0,.29,1.4),
+              y .32s cubic-bezier(.7,0,.29,1.4),
+              opacity .32s cubic-bezier(.7,0,.29,1.4);
+  filter: drop-shadow(0 1.5px 2px #0003);
+}
+/* Hamburguesa animada a X al abrir menú */
+body.menu-open .bar-top,
+.nav-menu.active ~ .mobile-menu-btn .bar-top {
+  transform: translateY(5px) rotate(45deg);
+}
+body.menu-open .bar-mid,
+.nav-menu.active ~ .mobile-menu-btn .bar-mid {
+  opacity: 0;
+}
+body.menu-open .bar-bottom,
+.nav-menu.active ~ .mobile-menu-btn .bar-bottom {
+  transform: translateY(-5px) rotate(-45deg);
+}
+.mobile-menu-btn {
+  background: linear-gradient(145deg, rgba(252, 239, 19, 0.12) 0%, rgba(252, 239, 19, 0.06) 100%);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 15px rgba(252, 239, 19, 0.17);
+  transition: box-shadow 0.33s;
+}
+.mobile-menu-btn:active {
+  background: var(--color-accent);
+  box-shadow: 0 1px 8px #fcef135a;
+}
+
+.menu-icon-svg-simple {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.mobile-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(252, 239, 19, 0.08) 0%, rgba(252, 239, 19, 0.04) 100%);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  color: var(--color-accent);
+  padding: 8px 10px;
+  box-shadow: 0 4px 12px rgba(252, 239, 19, 0.12);
+  cursor: pointer;
+  transition: background .18s, box-shadow .25s;
+  z-index: 1001;
+}
+.mobile-menu-btn:active, .mobile-menu-btn:focus {
+  background: var(--color-accent);
+  outline: none;
 }
