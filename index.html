@@ -17,12 +17,10 @@
                 <div class="logo">
                     <img src="img/logo/Chartier.png" alt="Logo Chartier" class="logo-img-pro" />
                 </div>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menú">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="menu-icon-svg-simple">
-                      <rect x="6" y="9" width="20" height="3" rx="1.5" fill="#FCEF13" />
-                      <rect x="6" y="15" width="20" height="3" rx="1.5" fill="#FCEF13" />
-                      <rect x="6" y="21" width="20" height="3" rx="1.5" fill="#FCEF13" />
-                    </svg>
+                <button class="mobile-menu-btn" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
                 <ul class="nav-menu nav-menu-spaced" id="navMenu">
                     <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
@@ -538,7 +536,7 @@
 
                     <!-- Imagen Principal -->
                     <div class="image-container image-grid-item">
-                        <img src="img/corte.png" alt="Corte industrial" class="contact-main-image">
+                        <img src="img/Fondo2.jpeg" alt="Corte industrial" class="contact-main-image">
                     </div>
                 </div>
             </div>
@@ -553,67 +551,40 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Menú móvil - SIMPLE
         function toggleMobileMenu() {
-            console.log('toggleMobileMenu called'); // Debug log
-            
             const navMenu = document.getElementById('navMenu');
             const mobileBtn = document.querySelector('.mobile-menu-btn');
             const overlay = document.getElementById('menuOverlay');
-            const body = document.body;
-
-            console.log('Elements found:', { navMenu, mobileBtn, overlay }); // Debug log
-
-            if (!navMenu || !mobileBtn) {
-                console.error('Menu elements not found:', { navMenu, mobileBtn });
-                return;
-            }
-
+            
+            if (!navMenu || !mobileBtn) return;
+            
             const isActive = navMenu.classList.contains('active');
-            console.log('Current state - isActive:', isActive); // Debug log
-
+            
             if (isActive) {
-                // Close menu
                 navMenu.classList.remove('active');
-                mobileBtn.innerHTML = '<span class="hamburger-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" class="menu-icon-svg"><rect x="6" y="10" width="20" height="3" rx="1.5" class="bar bar-top"/><rect x="6" y="15" width="20" height="3" rx="1.5" class="bar bar-mid"/><rect x="6" y="20" width="20" height="3" rx="1.5" class="bar bar-bottom"/></svg></span>';
-                mobileBtn.setAttribute('aria-label', 'Abrir menú');
+                mobileBtn.classList.remove('active');
                 document.body.style.overflow = 'auto';
                 if (overlay) overlay.classList.remove('active');
-                body.classList.remove('menu-open');
-                console.log('Menu closed'); // Debug log
             } else {
-                // Open menu
                 navMenu.classList.add('active');
-                mobileBtn.innerHTML = '<span class="hamburger-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" class="menu-icon-svg"><rect x="6" y="10" width="20" height="3" rx="1.5" class="bar bar-top"/><rect x="6" y="15" width="20" height="3" rx="1.5" class="bar bar-mid"/><rect x="6" y="20" width="20" height="3" rx="1.5" class="bar bar-bottom"/></svg></span>';
-                mobileBtn.setAttribute('aria-label', 'Cerrar menú');
+                mobileBtn.classList.add('active');
                 document.body.style.overflow = 'hidden';
                 if (overlay) overlay.classList.add('active');
-                body.classList.add('menu-open');
-                console.log('Menu opened'); // Debug log
             }
         }
 
         function closeMobileMenu() {
-            console.log('closeMobileMenu called'); // Debug log
-            
             const navMenu = document.getElementById('navMenu');
             const mobileBtn = document.querySelector('.mobile-menu-btn');
             const overlay = document.getElementById('menuOverlay');
-            const body = document.body;
-
-            if (!navMenu || !mobileBtn) {
-                console.error('Menu elements not found in closeMobileMenu:', { navMenu, mobileBtn });
-                return;
-            }
+            
+            if (!navMenu || !mobileBtn) return;
             
             navMenu.classList.remove('active');
-            mobileBtn.innerHTML = '<span class="hamburger-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" class="menu-icon-svg"><rect x="6" y="10" width="20" height="3" rx="1.5" class="bar bar-top"/><rect x="6" y="15" width="20" height="3" rx="1.5" class="bar bar-mid"/><rect x="6" y="20" width="20" height="3" rx="1.5" class="bar bar-bottom"/></svg></span>';
-            mobileBtn.setAttribute('aria-label', 'Abrir menú');
+            mobileBtn.classList.remove('active');
             document.body.style.overflow = 'auto';
             if (overlay) overlay.classList.remove('active');
-            body.classList.remove('menu-open');
-            
-            console.log('Menu closed via closeMobileMenu'); // Debug log
         }
 
         // Close mobile menu when clicking outside
@@ -782,31 +753,16 @@
         // Auto-advance carousel every 5 seconds
         setInterval(nextSlide, 5000);
 
-        // Additional mobile menu event listeners for better compatibility
+        // Event listener para el menú móvil
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, setting up mobile menu'); // Debug log
-            
             const mobileBtn = document.querySelector('.mobile-menu-btn');
-            const navMenu = document.getElementById('navMenu');
             
             if (mobileBtn) {
-                console.log('Mobile button found:', mobileBtn); // Debug log
-                
-                // Add click event listener as backup
                 mobileBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    console.log('Mobile button clicked via event listener'); // Debug log
                     toggleMobileMenu();
                 });
-            } else {
-                console.error('Mobile button not found on DOM load');
-            }
-            
-            if (navMenu) {
-                console.log('Nav menu found:', navMenu); // Debug log
-            } else {
-                console.error('Nav menu not found on DOM load');
             }
         });
     </script>
